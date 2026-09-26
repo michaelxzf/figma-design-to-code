@@ -1,0 +1,474 @@
+/* ============================================================
+   AURA Smart Ring — generated from Figma canvas (1440x900)
+   Baseline: 1440px desktop, fluid down to 320px mobile.
+   ============================================================ */
+
+:root {
+  --bg: #09090a;
+  --gold: #e5c185;
+  --gray: #8e8e93;
+  --white: #ffffff;
+  --stroke: rgba(255, 255, 255, 0.08);
+  --gold-soft: rgba(229, 193, 133, 0.12);
+  --surface: rgba(255, 255, 255, 0.01);
+  --font: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+/* ------------------------------------------------------------
+   Ambient glow
+   ------------------------------------------------------------ */
+
+.glow {
+  position: absolute;
+  border-radius: 9999px;
+  background: var(--gold);
+  pointer-events: none;
+}
+
+.glow-lg {
+  left: 47.9%;
+  top: 100px;
+  width: 48.6%;
+  aspect-ratio: 1;
+  opacity: 0.08;
+  filter: blur(80px);
+  box-shadow: 160px 160px 160px rgba(229, 193, 133, 0.35);
+}
+
+.glow-sm {
+  left: 58.3%;
+  top: 250px;
+  width: 27.8%;
+  aspect-ratio: 1;
+  opacity: 0.12;
+  filter: blur(50px);
+  box-shadow: 100px 100px 100px rgba(229, 193, 133, 0.35);
+}
+
+/* ------------------------------------------------------------
+   Header
+   ------------------------------------------------------------ */
+
+.site-header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  height: 96px;
+  padding: 0 64px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 16px;
+  height: 16px;
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.02em;
+}
+
+.site-nav {
+  display: flex;
+  gap: 40px;
+  margin-inline: auto;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.is-active {
+  color: var(--white);
+}
+
+.btn-preorder {
+  height: 32px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 20px;
+  background: var(--gold);
+  color: var(--bg);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.btn-preorder:hover {
+  filter: brightness(1.08);
+}
+
+.btn-preorder:active {
+  transform: scale(0.97);
+}
+
+.btn-preorder:focus-visible,
+.nav-link:focus-visible,
+.brand:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------
+   Hero — content column
+   ------------------------------------------------------------ */
+
+.hero {
+  position: relative;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 580px;
+  max-width: 100%;
+  padding: 122px 0 96px 64px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 12px;
+  border-radius: 100px;
+  background: var(--gold-soft);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.02em;
+}
+
+.hero-title {
+  margin-top: 16px;
+  font-size: clamp(40px, 4.45vw, 64px);
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--white);
+}
+
+.hero-subtitle {
+  margin-top: 22px;
+  max-width: 516px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--gray);
+}
+
+/* Feature cards */
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: start;
+  margin-top: 26px;
+  max-width: 516px;
+  list-style: none;
+}
+
+.feature-card {
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+}
+
+.feature-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feature-head img {
+  width: 18px;
+  height: 18px;
+}
+
+.feature-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.feature-desc {
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--gray);
+}
+
+/* Stats row */
+
+.stat-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 48px;
+  max-width: 516px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--white);
+}
+
+.stat-value--gold {
+  color: var(--gold);
+}
+
+.stat-label {
+  margin-top: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--gray);
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  margin-top: 2px;
+  background: var(--stroke);
+}
+
+/* ------------------------------------------------------------
+   Hero — product visual
+   ------------------------------------------------------------ */
+
+.hero-visual {
+  position: absolute;
+  /* no z-index: keeps blending unisolated so the ring can mix with the page glow */
+  left: 40.28%;
+  top: -96px; /* canvas places the visual block at page y=0, behind the header */
+  width: 41.67%;
+  aspect-ratio: 1;
+  pointer-events: none;
+}
+
+.orbit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid var(--stroke);
+  border-radius: 9999px;
+}
+
+.orbit-lg {
+  width: 80%;
+  aspect-ratio: 1;
+}
+
+.orbit-sm {
+  width: 63.33%;
+  aspect-ratio: 1;
+}
+
+.ring-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 66.67%;
+  height: auto;
+  mix-blend-mode: lighten; /* blend the photo's black backdrop into the page */
+  will-change: transform;
+}
+
+.chip {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  white-space: nowrap;
+}
+
+.chip--titanium {
+  left: 65.17%;
+  top: 27.83%;
+  background: rgba(9, 9, 10, 0.6);
+  border: 1px solid var(--gold-soft);
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.chip--core {
+  left: 1.25%;
+  top: 71.17%;
+  background: rgba(9, 9, 10, 0.6);
+  border: 1px solid var(--stroke);
+  color: var(--gray);
+  font-weight: 500;
+}
+
+/* ------------------------------------------------------------
+   Entrance animation
+   ------------------------------------------------------------ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s ease var(--delay, 0ms), transform 0.7s ease var(--delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .ring-img {
+    animation: none !important;
+  }
+}
+
+/* ------------------------------------------------------------
+   Tablet (768px – 1024px): stack content and visual
+   ------------------------------------------------------------ */
+
+@media (max-width: 1024px) {
+  .site-header {
+    padding: 0 32px;
+  }
+
+  .hero-content {
+    width: 100%;
+    padding: 48px 32px 24px;
+  }
+
+  .hero-visual {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(600px, 88vw);
+    margin: 24px auto 48px;
+  }
+
+  .feature-cards {
+    max-width: none;
+  }
+
+  .stat-row {
+    max-width: none;
+  }
+}
+
+/* ------------------------------------------------------------
+   Mobile (320px – 768px)
+   ------------------------------------------------------------ */
+
+@media (max-width: 768px) {
+  .site-nav {
+    display: none;
+  }
+
+  .site-header {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .hero-content {
+    padding: 32px 20px 16px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .feature-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-row {
+    gap: 24px;
+  }
+
+  .stat-divider {
+    height: 36px;
+  }
+
+  .chip {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .stat-row {
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  .stat-divider {
+    display: none;
+  }
+}
