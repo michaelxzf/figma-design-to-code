@@ -1,0 +1,14 @@
+{
+  "name": "@d2c/generator",
+  "version": "0.1.0",
+  "description": "Design IR -> React/Tailwind and HTML/Tailwind code generator",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src"
+  ],
+  "license": "MIT"
+}
